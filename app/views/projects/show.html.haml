@@ -1,16 +1,30 @@
 
 .l-container
   %header.l-header
-    %h1.text-center=@project.name
+    %h1.text-center= @project.name
 
   %main.l-content
-
     .state-container
+      .state.state-standby
+        =image_tag('waiting.gif', class: 'center-block img-responsive')
+        .stage-message
+          %h2 sin actividad zzzzz...
 
-      =image_tag('waiting.gif', class: 'center-block img-responsive')
+      .state.state-inprogress.hide
+        =image_tag('waiting.gif', class: 'center-block img-responsive')
+        .stage-message
+          %h2 push it push it
 
-      .stage-message
-        %h2 sin actividad zzzzz...
+      .state.state-success.hide
+        =image_tag('waiting.gif', class: 'center-block img-responsive')
+        .stage-message
+          %h2 Deploy exitoso!
+
+      .state.state-error.hide
+        =image_tag('waiting.gif', class: 'center-block img-responsive')
+        .stage-message
+          %h2 ¡eres un programador bamba!
+
 
     .ranking
       .ranking-header
@@ -49,12 +63,4 @@
           345
         .ranking-col
           82
-
-
-
-    .l-centered.text-center
-      =image_tag('kirby-jockey.gif')
-      =image_tag('kirby-jockey.gif')
-      =image_tag('kirby-jockey.gif')
-      =image_tag('kirby-jockey.gif')
-      =image_tag('kirby-jockey.gif')
+>>>>>>> bd5c801db5801f53aeba6a6b44c038b386799281
