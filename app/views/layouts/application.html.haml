@@ -1,0 +1,17 @@
+!!!
+%html{:lang => "es-ES"}
+  %head
+    %title= 'Deploy Battle'
+    %meta{:content => content_for?(:description) ? yield(:description) : t('common.app_desc'), :name => "description"}
+    %meta{:content => "none", :name => "msapplication-config"}
+    = stylesheet_link_tag "application", :media => "all" #, "data-turbolinks-track" => true
+    = javascript_include_tag "application" #, "data-turbolinks-track" => true
+
+    = csrf_meta_tags
+    = yield(:head)
+
+  %body
+    = yield
+
+    %footer(style='margin-top:30px')
+      %p.small.text-center #{Time.now.year} Tecnomei

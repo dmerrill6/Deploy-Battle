@@ -1,0 +1,30 @@
+
+// Layout
+// =============================================================================
+
+.l-container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.l-header {
+  position: relative;
+  width: 100%;
+  padding: 30px 0 45px;
+}
+
+.l-content {
+  @include make-row();
+  position: relative;
+  margin-bottom: 30px;
+}
+
+
+// contenedor mas pequeño
+.l-centered {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0;
+}

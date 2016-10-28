@@ -1,1 +1,60 @@
-test
+.l-container
+  %header.l-header
+    %h1.text-center Deploy Battle
+
+
+  %main.l-content
+
+    .state-container
+
+      =image_tag('waiting.gif', class: 'center-block img-responsive')
+
+      .stage-message
+        %h2 sin actividad zzzzz...
+
+    .ranking
+      .ranking-header
+        .ranking-col Nombre
+        .ranking-col Nº Push
+        .ranking-col Nº Fallas
+        .ranking-col Nº Exitos
+
+      -# Generar loop desde aqui
+      .ranking-user
+        .ranking-col.ranking-col--avatar
+          Boliche
+        .ranking-col
+          111
+        .ranking-col
+          17
+        .ranking-col
+          111
+
+      .ranking-user
+        .ranking-col.ranking-col--avatar
+          Tuco
+        .ranking-col
+          2
+        .ranking-col
+          68
+        .ranking-col
+          32
+
+      .ranking-user
+        .ranking-col.ranking-col--avatar
+          Pellote
+        .ranking-col
+          22
+        .ranking-col
+          345
+        .ranking-col
+          82
+
+
+
+    .l-centered.text-center
+      =image_tag('kirby-jockey.gif')
+      =image_tag('kirby-jockey.gif')
+      =image_tag('kirby-jockey.gif')
+      =image_tag('kirby-jockey.gif')
+      =image_tag('kirby-jockey.gif')

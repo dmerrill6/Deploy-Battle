@@ -13,5 +13,15 @@
  *= require_self
  */
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap-custom";
+
+
+@import "settings";
+@import "colors";
+@import "base";
+
+@import "typo";
+@import "layout";
+
+@import "modules";
