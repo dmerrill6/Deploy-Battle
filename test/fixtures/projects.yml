@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  successful_deploy_url: MyString
+  unsuccessful_deploy_url: MyString
+  pending_deploy_url: MyString
+  name: MyString
+
+two:
+  successful_deploy_url: MyString
+  unsuccessful_deploy_url: MyString
+  pending_deploy_url: MyString
+  name: MyString
