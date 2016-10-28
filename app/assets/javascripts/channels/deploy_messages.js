@@ -25,5 +25,5 @@ App.messages = App.cable.subscriptions.create('DeployMessagesChannel', {
 });
 
 var hideAll = function(){
-  $('.state-container').hide();
+  $('.state-container .state').hide();
 }
