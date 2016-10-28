@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 .new-project
   =link_to "New Project", new_project_path
 -@projects.each do |project|
   .div
     =link_to project.name, project_path(project)
-=======
+
 .l-container
   %header.l-header
     %h1.text-center @project.name
@@ -17,17 +16,17 @@
           %h2 sin actividad zzzzz...
 
       .state-inprogress.hide
-        =image_tag('waiting.gif', class: 'center-block img-responsive')
+        =image_tag('loading.gif', class: 'center-block img-responsive')
         .stage-message
           %h2 push it push it
 
       .state-success.hide
-        =image_tag('waiting.gif', class: 'center-block img-responsive')
+        =image_tag('congratulation.gif', class: 'center-block img-responsive')
         .stage-message
           %h2 Deploy exitoso!
 
       .state-error.hide
-        =image_tag('waiting.gif', class: 'center-block img-responsive')
+        =image_tag('not-today.gif', class: 'center-block img-responsive')
         .stage-message
           %h2 ¡eres un programador bamba!
 
@@ -69,4 +68,3 @@
           345
         .ranking-col
           82
->>>>>>> bd5c801db5801f53aeba6a6b44c038b386799281
