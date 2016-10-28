@@ -54,3 +54,4 @@ gem 'rolify'
 
 # Better html with embedded Ruby template
 gem 'haml'
+gem 'redis'
