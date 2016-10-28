@@ -6,22 +6,22 @@
     .state-container
       .state-standby
         =image_tag('waiting.gif', class: 'center-block img-responsive')
-        .stage-message
+        .state-message
           %h2 sin actividad zzzzz...
 
       .state-inprogress.hide
         =image_tag('loading.gif', class: 'center-block img-responsive')
-        .stage-message
+        .state-message
           %h2 push it push it
 
       .state-success.hide
         =image_tag('congratulation.gif', class: 'center-block img-responsive')
-        .stage-message
+        .state-message
           %h2 Deploy exitoso!
 
       .state-error.hide
         =image_tag('not-today.gif', class: 'center-block img-responsive')
-        .stage-message
+        .state-message
           %h2 ¡eres un programador bamba!
 
 
@@ -32,33 +32,34 @@
         .ranking-col Nº Fallas
         .ranking-col Nº Exitos
 
-      -# Generar loop desde aqui
-      .ranking-user
-        .ranking-col.ranking-col--avatar
-          Boliche
-        .ranking-col
-          111
-        .ranking-col
-          17
-        .ranking-col
-          111
+      .ranking-body
+        -# Generar loop desde aqui
+        .ranking-user
+          .ranking-col.ranking-col--avatar
+            Boliche
+          .ranking-col
+            111
+          .ranking-col
+            17
+          .ranking-col
+            111
 
-      .ranking-user
-        .ranking-col.ranking-col--avatar
-          Tuco
-        .ranking-col
-          2
-        .ranking-col
-          68
-        .ranking-col
-          32
+        .ranking-user
+          .ranking-col.ranking-col--avatar
+            Tuco
+          .ranking-col
+            2
+          .ranking-col
+            68
+          .ranking-col
+            32
 
-      .ranking-user
-        .ranking-col.ranking-col--avatar
-          Pellote
-        .ranking-col
-          22
-        .ranking-col
-          345
-        .ranking-col
-          82
+        .ranking-user
+          .ranking-col.ranking-col--avatar
+            Pellote
+          .ranking-col
+            22
+          .ranking-col
+            345
+          .ranking-col
+            82
