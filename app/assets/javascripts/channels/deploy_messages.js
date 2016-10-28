@@ -1,15 +1,29 @@
 App.messages = App.cable.subscriptions.create('DeployMessagesChannel', {
   received: function(data) {
     if(data.message_type == "success"){
-      alert("Mensaje de éxito recibido.");
+      hideAll();
+      $('.state-success').show();
+      setTimeout(function () {
+        $('.state-standby').show();
+      }, 5000);
+
     }
     else if(data.message_type == "failure"){
-      alert("Mensaje de fracaso recibido.");
+      hideAll();
+      $('.state-error').show();
+      setTimeout(function () {
+        $('.state-standby').show();
+      }, 5000);
+
 
     }
     else if(data.message_type == "start"){
-      alert("Mensaje de inicio recibido.");
-
+      hideAll();
+      $('.state-inprogress').show();
     }
   }
 });
+
+var hideAll = function(){
+  $('.state-container').hide();
+}
