@@ -1,25 +1,24 @@
 .l-container
   %header.l-header
-    %h1.text-center @project.name
+    %h1.text-center=@project.name
 
   %main.l-content
     .state-container
-      .state-standby
+      .state.state-standby
         =image_tag('waiting.gif', class: 'center-block img-responsive')
         .state-message
           %h2 sin actividad zzzzz...
-
-      .state-inprogress.hide
+      .state.state-inprogress.hide-soft
         =image_tag('loading.gif', class: 'center-block img-responsive')
         .state-message
           %h2 push it push it
 
-      .state-success.hide
+      .state.state-success.hide-soft
         =image_tag('congratulation.gif', class: 'center-block img-responsive')
         .state-message
           %h2 Deploy exitoso!
 
-      .state-error.hide
+      .state.state-error.hide-soft
         =image_tag('not-today.gif', class: 'center-block img-responsive')
         .state-message
           %h2 ¡eres un programador bamba!
