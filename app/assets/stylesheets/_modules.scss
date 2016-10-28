@@ -1,0 +1,43 @@
+// Stages
+//
+
+.stage {
+  margin-bottom: 30px;
+}
+
+.stage-message {
+  text-align: center;
+}
+
+
+
+.ranking {
+  width: 100%;
+  max-width: 750px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ranking-user,
+.ranking-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 4px solid $color-primary;
+
+  @media screen and (max-width: $screen-sm-min) {
+    font-size: 80%;
+  }
+}
+
+.ranking-col {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  .ranking-header & {
+    font-size: 24px;
+  }
+}
