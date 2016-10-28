@@ -1,3 +1,14 @@
 =form_for Project.new do |f|
   =f.label :name
   =f.text_field :name
+  %br
+  =f.label :successful_deploy_url
+  =f.text_field :successful_deploy_url
+  %br
+  =f.label :unsuccessful_deploy_url
+  =f.text_field :unsuccessful_deploy_url
+  %br
+  =f.label :pending_deploy_url
+  =f.text_field :pending_deploy_url
+  %br
+  =f.submit
