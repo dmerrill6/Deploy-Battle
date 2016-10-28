@@ -1,13 +1,18 @@
 // Stages
-//
+// ---------------------------------------------------
 
-.stage {
-  margin-bottom: 30px;
+.stage-container {
+  margin-bottom: 60px;
 }
 
 .stage-message {
   text-align: center;
 }
+
+
+
+// Ranking
+// ---------------------------------------------------
 
 .ranking {
   width: 100%;
@@ -30,13 +35,17 @@
   }
 }
 
+.ranking-user:first-child {
+  font-size: 24px;
+  background-color: tomate;
+}
+
 .ranking-user {
   border-bottom: 4px solid $color-primary;
 }
 .ranking-header {
   border-bottom: 6px solid $color-accent;
 }
-
 
 .ranking-col {
   padding-top: 15px;

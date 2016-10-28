@@ -3,13 +3,27 @@
     %h1.text-center @project.name
 
   %main.l-content
-
     .state-container
+      .state-standby
+        =image_tag('waiting.gif', class: 'center-block img-responsive')
+        .stage-message
+          %h2 sin actividad zzzzz...
 
-      =image_tag('waiting.gif', class: 'center-block img-responsive')
+      .state-inprogress.hide
+        =image_tag('waiting.gif', class: 'center-block img-responsive')
+        .stage-message
+          %h2 push it push it
 
-      .stage-message
-        %h2 sin actividad zzzzz...
+      .state-success.hide
+        =image_tag('waiting.gif', class: 'center-block img-responsive')
+        .stage-message
+          %h2 Deploy exitoso!
+
+      .state-error.hide
+        =image_tag('waiting.gif', class: 'center-block img-responsive')
+        .stage-message
+          %h2 ¡eres un programador bamba!
+
 
     .ranking
       .ranking-header
