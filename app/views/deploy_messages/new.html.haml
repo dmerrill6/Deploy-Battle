@@ -1,0 +1,4 @@
+=form_for :deploy_message, url: project_deploy_messages_path(project: @project.id) do |f|
+  =f.label :message_type
+  =f.text_field :message_type
+  =f.submit

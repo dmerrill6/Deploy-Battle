@@ -2,7 +2,7 @@ development:
   adapter: async
 
 test:
-  adapter: async
+  adapter: <%= ENV['REDISTOGO_URL'] %>
 
 production:
   adapter: redis
