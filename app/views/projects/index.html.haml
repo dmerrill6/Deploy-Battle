@@ -1,1 +1,5 @@
-
+.new-project
+  =link_to "New Project", new_project_path
+-@projects.each do |project|
+  .div
+    =link_to project.name, project_path(project)
