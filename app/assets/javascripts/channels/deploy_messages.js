@@ -25,6 +25,7 @@ App.messages = App.cable.subscriptions.create('DeployMessagesChannel', {
     }
 
     updateCommitter(data.committer_name, data.message_type);
+    sortTable();
   }
 });
 
@@ -47,4 +48,17 @@ var updateCommitter = function(committerName, messageType){
   // In any case, update push number
   var currAmount = parseInt($("#committer-" + committerName + " " + uploadedFieldSelector).text());
   $("#committer-" + committerName + " " + uploadedFieldSelector).text(currAmount + 1);
+}
+
+var sortTable = function(){
+  rows = $('.ranking .ranking-body .ranking-user').sort(function(a, b) {
+      keyA = parseInt($('.success-number', a).text()) - parseInt($('.failure-number', a).text());
+      keyB = parseInt($('.success-number', b).text()) - parseInt($('.failure-number', b).text());
+      return (keyA < keyB) ? 1 : 0;  // B bigger than A, sorting descending
+
+  });
+
+  rows.each(function(index, row){
+    $('.ranking-body').append(row);                  // append rows after sort
+  });
 }

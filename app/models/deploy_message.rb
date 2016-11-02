@@ -1,6 +1,6 @@
 class DeployMessage < ApplicationRecord
   belongs_to :project
-
+  
   def assign_committer committer_name
     committer = project.committers.find_or_create_by_name committer_name
     case message_type

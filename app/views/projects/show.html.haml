@@ -6,21 +6,21 @@
     .state-container
       .state.state-standby
         =image_tag('waiting.gif', class: 'center-block img-responsive')
-        .stage-message
+        .state-message
           %h2 sin actividad zzzzz...
       .state.state-inprogress.hide-soft
         =image_tag('loading.gif', class: 'center-block img-responsive')
-        .stage-message
+        .state-message
           %h2 push it push it
 
       .state.state-success.hide-soft
         =image_tag('congratulation.gif', class: 'center-block img-responsive')
-        .stage-message
+        .state-message
           %h2 Deploy exitoso!
 
       .state.state-error.hide-soft
         =image_tag('not-today.gif', class: 'center-block img-responsive')
-        .stage-message
+        .state-message
           %h2 ¡eres un programador bamba!
 
 
@@ -32,13 +32,14 @@
         .ranking-col Nº Exitos
 
       -# Generar loop desde aqui
-      -@project.committers.each do |committer|
-        .ranking-user{id: "committer-#{committer.name}"}
-          .ranking-col.ranking-col--avatar
-            =committer.name
-          .ranking-col.push-number
-            =committer.push_number
-          .ranking-col.failure-number
-            =committer.failure_number
-          .ranking-col.success-number
-            =committer.success_number
+      .ranking-body
+        -@project.sorted_committers_by_score.each do |committer|
+          .ranking-user{id: "committer-#{committer.name}"}
+            .ranking-col.ranking-col--avatar
+              =committer.name
+            .ranking-col.push-number
+              =committer.push_number
+            .ranking-col.failure-number
+              =committer.failure_number
+            .ranking-col.success-number
+              =committer.success_number
