@@ -36,8 +36,6 @@
         -@project.sorted_committers_by_score.each_with_index do |committer, index|
           .ranking-user{id: "committer-#{committer.name}"}
             .ranking-col.ranking-col--avatar
-              -if index == 0
-                =image_tag "kirby-jockey.gif"
               =committer.name
             .ranking-col.push-number
               =committer.push_number

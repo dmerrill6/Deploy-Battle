@@ -47,7 +47,9 @@
   font-size: 20px;
   border-color: $color-accent;
 }
-
+.ranking-user:first-child .ranking-col--avatar:before {
+  content: asset-url("kirby-jockey.gif");
+}
 
 .ranking-col {
   padding-top: 15px;
