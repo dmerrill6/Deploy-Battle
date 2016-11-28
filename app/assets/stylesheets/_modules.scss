@@ -55,6 +55,10 @@
   padding-top: 15px;
   padding-bottom: 15px;
 
+  &:first-child {
+    width: 25%;
+  }
+
   .ranking-header & {
     font-size: 24px;
   }
