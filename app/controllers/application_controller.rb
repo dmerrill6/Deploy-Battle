@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_filter :iframe_headers
 
-  def iframe_action
+  def iframe_headers
     response.headers["X-FRAME-OPTIONS"] = "ALLOW-FROM http://dash-battle.herokuapp.com"
     response.headers["X-FRAME-OPTIONS"] = "ALLOW-FROM http://localhost:3000"
     response.headers["X-FRAME-OPTIONS"] = "ALLOW-FROM http://localhost:3001"
